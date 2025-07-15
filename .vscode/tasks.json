@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Flutter: Run App",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"run",
+				"--debug"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$dart-flutter"
+			],
+			"isBackground": false
+		}
+	]
+}
