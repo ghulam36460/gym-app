@@ -1,16 +1,4 @@
 class AppUser {
-  final String id;
-  final String fullName;
-  final String email;
-  final int age;
-  final double height; // in cm
-  final double weight; // in kg
-  final String fitnessGoal;
-  final String profileImagePath;
-  final double bmi;
-  final bool isEmailVerified;
-  final DateTime createdAt;
-  final DateTime updatedAt;
 
   AppUser({
     required this.id,
@@ -26,34 +14,6 @@ class AppUser {
     this.profileImagePath = '',
     this.isEmailVerified = false,
   });
-
-  String get bmiCategory {
-    if (bmi < 18.5) return 'Underweight';
-    if (bmi < 25) return 'Normal';
-    if (bmi < 30) return 'Overweight';
-    return 'Obese';
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'fullName': fullName,
-      'email': email,
-      'age': age,
-      'height': height,
-      'weight': weight,
-      'fitnessGoal': fitnessGoal,
-      'profileImagePath': profileImagePath,
-      'bmi': bmi,
-      'isEmailVerified': isEmailVerified,
-      'createdAt': createdAt.toIso8601String(),
-      'updatedAt': updatedAt.toIso8601String(),
-    };
-  }
-
-  Map<String, dynamic> toFirestore() {
-    return toJson();
-  }
 
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(
@@ -91,6 +51,46 @@ class AppUser {
           ? DateTime.parse(data['updatedAt']) 
           : DateTime.now(),
     );
+  }
+  final String id;
+  final String fullName;
+  final String email;
+  final int age;
+  final double height; // in cm
+  final double weight; // in kg
+  final String fitnessGoal;
+  final String profileImagePath;
+  final double bmi;
+  final bool isEmailVerified;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+
+  String get bmiCategory {
+    if (bmi < 18.5) return 'Underweight';
+    if (bmi < 25) return 'Normal';
+    if (bmi < 30) return 'Overweight';
+    return 'Obese';
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'fullName': fullName,
+      'email': email,
+      'age': age,
+      'height': height,
+      'weight': weight,
+      'fitnessGoal': fitnessGoal,
+      'profileImagePath': profileImagePath,
+      'bmi': bmi,
+      'isEmailVerified': isEmailVerified,
+      'createdAt': createdAt.toIso8601String(),
+      'updatedAt': updatedAt.toIso8601String(),
+    };
+  }
+
+  Map<String, dynamic> toFirestore() {
+    return toJson();
   }
 
   AppUser copyWith({

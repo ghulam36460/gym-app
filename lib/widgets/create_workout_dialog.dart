@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/workout_provider.dart';
+
 import '../models/workout.dart';
+import '../providers/workout_provider.dart';
 
 class CreateWorkoutDialog extends StatefulWidget {
   const CreateWorkoutDialog({super.key});

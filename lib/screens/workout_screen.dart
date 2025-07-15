@@ -1,10 +1,11 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:animate_do/animate_do.dart';
-import '../providers/workout_provider.dart';
+
 import '../models/workout.dart';
-import '../widgets/exercise_card.dart';
+import '../providers/workout_provider.dart';
 import '../widgets/create_workout_dialog.dart';
+import '../widgets/exercise_card.dart';
 
 class WorkoutScreen extends StatefulWidget {
   const WorkoutScreen({super.key});

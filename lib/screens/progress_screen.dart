@@ -1,9 +1,10 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:animate_do/animate_do.dart';
-import '../providers/workout_provider.dart';
+
 import '../providers/user_provider.dart';
+import '../providers/workout_provider.dart';
 
 class ProgressScreen extends StatefulWidget {
   const ProgressScreen({super.key});
